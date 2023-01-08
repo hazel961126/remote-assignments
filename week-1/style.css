@@ -48,6 +48,7 @@ h1{
 
 .box1, .box2, .box3, .box4 {
     width: 40%;
+    max-width: 550px;
     height: 100px;
     background-color: #76879a;
     margin: 8px;
