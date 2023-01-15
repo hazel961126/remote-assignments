@@ -26,7 +26,7 @@ const callToAction = document.querySelector('button');
 const columns = document.querySelector('.columns-added');
 
 function addColumns(){
-    document.querySelector('.columns-added').style.display = 'block';
+    document.querySelector('.columns-added').style.display = 'flex';
 }
 callToAction.addEventListener('click', addColumns);
 
