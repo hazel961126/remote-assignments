@@ -1,0 +1,166 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+  }
+  
+a {
+    text-decoration: none;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* logo and navigator */
+.main-header, .main-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgrey;
+    height: 6vh;
+}
+
+
+
+.logo {
+	font-size: 1.2em;
+    margin: 0;
+}
+
+.logo,
+.main-nav a {
+	padding: 10px 20px;
+}
+
+.menu {
+    float: right;
+    width: 30px;
+    margin: 15px;
+}
+
+
+/* welcome message */
+.welcome{
+    font-size: 2rem;
+    background-color: lightskyblue;
+    padding: 60px;
+    margin: 0;
+}
+
+/* container and boxes*/
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.columns, .columns-added {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.columns-added {
+    display: none;
+}
+
+
+.item {
+    background-color: #76879a;
+    height: 150px;
+    padding: 20px;
+    margin: 10px;
+    font-size: 1rem;
+    flex: 1 45%;  /*Arranging boxes*/
+}
+
+button {
+    background-color: lightsteelblue;
+    border: none;
+    width: 120px;
+    height: 50px;
+    font-size: 100%;
+    cursor: pointer;
+  }
+
+
+
+/* Floating menu */
+.side-nav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    right: 0px;
+    top: 0;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+.side-nav a{
+    padding: 15px 15px 15px 30px;
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+    display: block;
+}
+
+
+
+#close-btn {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1;
+}
+
+#close-btn {
+    display: none;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (min-width: 1200px) {
+    .side-nav, .menu{
+        display: none;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1199px){
+    .side-nav, .menu{
+        display: none;
+    }
+    
+}
+
+@media (min-width: 500px) and (max-width: 799px){
+    .main-nav{
+		display: none;
+	}
+}
+
+@media (max-width: 499px) {
+    .main-nav{
+        display: none;
+      }
+    .columns, .columns-added{
+        display: block;
+    }
+} 
