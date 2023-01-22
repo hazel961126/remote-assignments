@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Count your number</title>
+</head>
+
+<body>
+    <script>
+        function getData() {
+            const req = new XMLHttpRequest();
+            const input = document.getElementById("input").value;
+            if (input === ''){
+                req.open("get", "/getData");
+            } else {
+                req.open("get", "/getData?number=" + input);
+            }
+            req.onload = function() {
+                document.getElementById("content").innerHTML = req.responseText;
+            };
+            req.send();
+        };
+    </script>
+
+    <div id="content"> 
+        <input id="input"></input>
+        <button id="submit" type= "button" onclick="getData()">submit</button>
+    </div>
+</body>
+</html>
